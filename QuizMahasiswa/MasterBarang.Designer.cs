@@ -110,6 +110,7 @@
             this.btnSave.TabIndex = 82;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dateExpired
             // 
@@ -165,9 +166,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(220, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 73;
-            this.label3.Text = "Design";
+            this.label3.Text = "Nama Barang";
             // 
             // label7
             // 
@@ -219,27 +220,28 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(220, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 74;
-            this.label2.Text = "Product ID";
+            this.label2.Text = "ID Barang";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(220, 52);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 67;
-            this.label8.Text = "Item Name";
+            this.label8.Text = "Id Barang";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(303, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(186, 24);
             this.label1.TabIndex = 66;
-            this.label1.Text = "label1";
+            this.label1.Text = "MASTER BARANG";
             // 
             // MasterBarang
             // 

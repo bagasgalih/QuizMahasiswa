@@ -16,5 +16,32 @@ namespace QuizMahasiswa
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            int id = int.Parse(txtID.Text);
+            string item = txtItem.Text;
+            string design = txtDesign.Text;
+            string color = cbColor.Text;
+            DateTime expiredDate = DateTime.Parse(dateExpired.Text);
+
+            var data = new TB_M_PRODUCT
+            {
+                ID = id,
+                itemName = item,
+                color = color,
+                design = design,
+                expiredDate = expiredDate
+            };
+
+            db.TB_M_PRODUCTs.InsertOnSubmit(data);
+            db.SubmitChanges();
+            MessageBox.Show("Save Succesfully");
+            txtDesign.Clear();
+            txtItem.Clear();
+            cbColor.Items.Clear();
+            LoadData();
+        }
     }
 }
