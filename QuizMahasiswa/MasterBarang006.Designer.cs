@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -38,9 +37,9 @@
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtHarga = new System.Windows.Forms.TextBox();
             this.txtNamaBarang = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.TxtBoxID = new System.Windows.Forms.TextBox();
+            this.txtNamaSupplier = new System.Windows.Forms.TextBox();
             this.txtNamaCari = new System.Windows.Forms.TextBox();
-            this.txtIdBarangCari = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,22 +49,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSupplier = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbSupplier
-            // 
-            this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Items.AddRange(new object[] {
-            "Merah",
-            "Biru",
-            "Hijau",
-            "Kuning",
-            "Hitam"});
-            this.cbSupplier.Location = new System.Drawing.Point(307, 295);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(121, 21);
-            this.cbSupplier.TabIndex = 87;
             // 
             // dataGridView1
             // 
@@ -93,6 +79,7 @@
             this.btnDelete.TabIndex = 84;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -142,35 +129,35 @@
             this.txtNamaBarang.Size = new System.Drawing.Size(116, 20);
             this.txtNamaBarang.TabIndex = 80;
             // 
-            // txtID
+            // TxtBoxID
             // 
-            this.txtID.Location = new System.Drawing.Point(307, 139);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(116, 20);
-            this.txtID.TabIndex = 77;
+            this.TxtBoxID.Location = new System.Drawing.Point(307, 139);
+            this.TxtBoxID.Name = "TxtBoxID";
+            this.TxtBoxID.Size = new System.Drawing.Size(116, 20);
+            this.TxtBoxID.TabIndex = 77;
+            // 
+            // txtNamaSupplier
+            // 
+            this.txtNamaSupplier.Location = new System.Drawing.Point(307, 82);
+            this.txtNamaSupplier.Name = "txtNamaSupplier";
+            this.txtNamaSupplier.Size = new System.Drawing.Size(116, 20);
+            this.txtNamaSupplier.TabIndex = 76;
             // 
             // txtNamaCari
             // 
-            this.txtNamaCari.Location = new System.Drawing.Point(307, 82);
+            this.txtNamaCari.Location = new System.Drawing.Point(307, 52);
             this.txtNamaCari.Name = "txtNamaCari";
             this.txtNamaCari.Size = new System.Drawing.Size(116, 20);
-            this.txtNamaCari.TabIndex = 76;
-            // 
-            // txtIdBarangCari
-            // 
-            this.txtIdBarangCari.Location = new System.Drawing.Point(307, 52);
-            this.txtIdBarangCari.Name = "txtIdBarangCari";
-            this.txtIdBarangCari.Size = new System.Drawing.Size(116, 20);
-            this.txtIdBarangCari.TabIndex = 75;
+            this.txtNamaCari.TabIndex = 75;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(220, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 73;
-            this.label3.Text = "Nama Barang";
+            this.label3.Text = "Nama Supplier";
             // 
             // label7
             // 
@@ -231,9 +218,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(220, 52);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.Size = new System.Drawing.Size(72, 13);
             this.label8.TabIndex = 67;
-            this.label8.Text = "Id Barang";
+            this.label8.Text = "Nama Barang";
             // 
             // label1
             // 
@@ -245,24 +232,31 @@
             this.label1.TabIndex = 66;
             this.label1.Text = "MASTER BARANG";
             // 
+            // txtSupplier
+            // 
+            this.txtSupplier.Location = new System.Drawing.Point(307, 292);
+            this.txtSupplier.Name = "txtSupplier";
+            this.txtSupplier.Size = new System.Drawing.Size(116, 20);
+            this.txtSupplier.TabIndex = 79;
+            // 
             // MasterBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 584);
-            this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dateExpired);
+            this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtHarga);
             this.Controls.Add(this.txtNamaBarang);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.TxtBoxID);
+            this.Controls.Add(this.txtNamaSupplier);
             this.Controls.Add(this.txtNamaCari);
-            this.Controls.Add(this.txtIdBarangCari);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
@@ -282,8 +276,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbSupplier;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
@@ -293,9 +285,9 @@
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.TextBox txtNamaBarang;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox TxtBoxID;
+        private System.Windows.Forms.TextBox txtNamaSupplier;
         private System.Windows.Forms.TextBox txtNamaCari;
-        private System.Windows.Forms.TextBox txtIdBarangCari;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
@@ -305,6 +297,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSupplier;
     }
 }
 

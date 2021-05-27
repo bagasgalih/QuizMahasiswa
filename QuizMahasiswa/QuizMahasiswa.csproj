@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -52,16 +52,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="MasterBarang.cs">
+    <Compile Include="MasterBarang006.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MasterBarang.Designer.cs">
-      <DependentUpon>MasterBarang.cs</DependentUpon>
+    <Compile Include="MasterBarang006.Designer.cs">
+      <DependentUpon>MasterBarang006.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MasterBarang.resx">
-      <DependentUpon>MasterBarang.cs</DependentUpon>
+    <EmbeddedResource Include="MasterBarang006.resx">
+      <DependentUpon>MasterBarang006.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
