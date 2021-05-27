@@ -19,8 +19,7 @@ namespace QuizMahasiswa
             InitializeComponent();
         }
         DataClasses1DataContext db = new DataClasses1DataContext();
-        
-           
+
         void LoadData()
         {
             var st = from tb in db.tbl_barangs select tb;
@@ -29,12 +28,9 @@ namespace QuizMahasiswa
 
         private void MasterBarang_Load(object sender, EventArgs e)
         {
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select isnull(max (cast (ID as int)),0) + 1 from tbl_barang", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            TxtBoxID.Text = dt.Rows[0][0].ToString();
+            autoid();
             LoadData();
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
