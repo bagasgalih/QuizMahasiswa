@@ -36,11 +36,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.dateExpired = new System.Windows.Forms.DateTimePicker();
             this.txtStock = new System.Windows.Forms.TextBox();
-            this.txtDesign = new System.Windows.Forms.TextBox();
-            this.txtItem = new System.Windows.Forms.TextBox();
+            this.txtHarga = new System.Windows.Forms.TextBox();
+            this.txtNamaBarang = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtDesignCari = new System.Windows.Forms.TextBox();
-            this.txtItemCari = new System.Windows.Forms.TextBox();
+            this.txtNamaCari = new System.Windows.Forms.TextBox();
+            this.txtIdBarangCari = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -83,6 +83,7 @@
             this.btnSearch.TabIndex = 85;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -101,6 +102,7 @@
             this.btnUpdate.TabIndex = 83;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -126,19 +128,19 @@
             this.txtStock.Size = new System.Drawing.Size(116, 20);
             this.txtStock.TabIndex = 79;
             // 
-            // txtDesign
+            // txtHarga
             // 
-            this.txtDesign.Location = new System.Drawing.Point(307, 220);
-            this.txtDesign.Name = "txtDesign";
-            this.txtDesign.Size = new System.Drawing.Size(116, 20);
-            this.txtDesign.TabIndex = 78;
+            this.txtHarga.Location = new System.Drawing.Point(307, 220);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(116, 20);
+            this.txtHarga.TabIndex = 78;
             // 
-            // txtItem
+            // txtNamaBarang
             // 
-            this.txtItem.Location = new System.Drawing.Point(307, 188);
-            this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(116, 20);
-            this.txtItem.TabIndex = 80;
+            this.txtNamaBarang.Location = new System.Drawing.Point(307, 188);
+            this.txtNamaBarang.Name = "txtNamaBarang";
+            this.txtNamaBarang.Size = new System.Drawing.Size(116, 20);
+            this.txtNamaBarang.TabIndex = 80;
             // 
             // txtID
             // 
@@ -147,19 +149,19 @@
             this.txtID.Size = new System.Drawing.Size(116, 20);
             this.txtID.TabIndex = 77;
             // 
-            // txtDesignCari
+            // txtNamaCari
             // 
-            this.txtDesignCari.Location = new System.Drawing.Point(307, 82);
-            this.txtDesignCari.Name = "txtDesignCari";
-            this.txtDesignCari.Size = new System.Drawing.Size(116, 20);
-            this.txtDesignCari.TabIndex = 76;
+            this.txtNamaCari.Location = new System.Drawing.Point(307, 82);
+            this.txtNamaCari.Name = "txtNamaCari";
+            this.txtNamaCari.Size = new System.Drawing.Size(116, 20);
+            this.txtNamaCari.TabIndex = 76;
             // 
-            // txtItemCari
+            // txtIdBarangCari
             // 
-            this.txtItemCari.Location = new System.Drawing.Point(307, 52);
-            this.txtItemCari.Name = "txtItemCari";
-            this.txtItemCari.Size = new System.Drawing.Size(116, 20);
-            this.txtItemCari.TabIndex = 75;
+            this.txtIdBarangCari.Location = new System.Drawing.Point(307, 52);
+            this.txtIdBarangCari.Name = "txtIdBarangCari";
+            this.txtIdBarangCari.Size = new System.Drawing.Size(116, 20);
+            this.txtIdBarangCari.TabIndex = 75;
             // 
             // label3
             // 
@@ -256,11 +258,11 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dateExpired);
             this.Controls.Add(this.txtStock);
-            this.Controls.Add(this.txtDesign);
-            this.Controls.Add(this.txtItem);
+            this.Controls.Add(this.txtHarga);
+            this.Controls.Add(this.txtNamaBarang);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtDesignCari);
-            this.Controls.Add(this.txtItemCari);
+            this.Controls.Add(this.txtNamaCari);
+            this.Controls.Add(this.txtIdBarangCari);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
@@ -271,7 +273,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.Name = "MasterBarang";
-            this.Text = "Form1";
+            this.Text = "MASTER BARANG";
+            this.Load += new System.EventHandler(this.MasterBarang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,11 +291,11 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DateTimePicker dateExpired;
         private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.TextBox txtDesign;
-        private System.Windows.Forms.TextBox txtItem;
+        private System.Windows.Forms.TextBox txtHarga;
+        private System.Windows.Forms.TextBox txtNamaBarang;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtDesignCari;
-        private System.Windows.Forms.TextBox txtItemCari;
+        private System.Windows.Forms.TextBox txtNamaCari;
+        private System.Windows.Forms.TextBox txtIdBarangCari;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
